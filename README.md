@@ -23,11 +23,11 @@ Async REST API for team task tracking built with FastAPI, SQLAlchemy 2 and Postg
 - JWT auth with Argon2 and timing-safe login; a background worker auto-cancels overdue tasks.
 - 54 tests against real PostgreSQL at 97% coverage; CI checks migrations against the models.
 
-### [GitHub Search](https://github.com/maxnykoliv/GitHubRepoSearchBackend)
-Django REST Framework service in front of the GitHub Search API, with a React client.
+### [RepoRadar](https://github.com/maxnykoliv/RepoRadar)
+Full-stack GitHub search: a Django REST Framework API in front of the GitHub Search API, with a React client.
 - Redis cache with normalized keys and a TTL; it degrades to uncached instead of failing when Redis is down.
 - GitHub failures mapped to meaningful statuses (429 + `Retry-After`, 422, 502, 504).
-- User accounts and saved favourites.
+- JWT accounts and race-safe saved favorites; CI runs the integration tests against real Redis.
 
 ### [Location Popularity](https://github.com/maxnykoliv/locationpopularity)
 Django REST API for a catalogue of places with reviews, ratings and popularity ranking.
